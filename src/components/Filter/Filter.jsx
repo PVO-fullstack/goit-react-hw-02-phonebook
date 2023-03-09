@@ -1,19 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Label, Input } from '../ContactForm/ContactForm.styled';
 
-export class Filter extends Component {
-  hendleFilterInput = e => {
-    const q = e.currentTarget.value;
-    this.props.onChange(q);
-  };
-
-  render() {
-    return (
-      <div>
-        <label>
-          Finds contacts by name
-          <input type="text" onChange={this.hendleFilterInput} />
-        </label>
-      </div>
-    );
-  }
-}
+export const Filter = ({ value, onChange }) => {
+  return (
+    <Label>
+      Finds contacts by name
+      <Input type="text" value={value} onChange={onChange} />
+    </Label>
+  );
+};
