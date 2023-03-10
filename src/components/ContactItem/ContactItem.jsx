@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button, Li, Span } from './ContactItem.styled';
 
 export const ContactItem = ({ visibleContacts, onDeleteContact }) => {
@@ -9,4 +10,9 @@ export const ContactItem = ({ visibleContacts, onDeleteContact }) => {
       <Button onClick={() => onDeleteContact(contact.id)}>Delete</Button>
     </Li>
   ));
+};
+
+ContactItem.propTypes = {
+  visibleContacts: PropTypes.array.isRequired,
+  onDeleteContact: PropTypes.func.isRequired,
 };
