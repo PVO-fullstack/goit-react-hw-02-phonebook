@@ -13,3 +13,8 @@ export const Title = styled.h2`
   margin: 0;
   margin-top: 40px;
 `;
+
+export const Li = styled.li`
+  list-style: none;
+  line-height: 0.8;
+`;
